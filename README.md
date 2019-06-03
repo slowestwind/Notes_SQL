@@ -255,11 +255,54 @@ Join types are:
 ### Inner Join
 Returns records that have matching values in both tables
 
+<strong>Join two table</strong>
+```
+SELECT colName(s)
+FROM tableName1
+INNER JOIN tableName2
+ON tableName1.colName = tableName2.colName;
+```
+<strong>Join three table</strong>
+```
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM Orders
+  INNER JOIN Customers
+  ON Orders.CustomerID = Customers.CustomerID)
+  INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+  );
+
+```
+
+### Left Join
+The LEFT JOIN keyword returns all records from the tableName1, and the matched records from the tableName2.
+The result is NULL from the right side, if there is no match.
+
+```
+SELECT colName(s)
+FROM tableName1
+LEFT JOIN tableName2
+ON tableName1.colName = tableName2.colName;
+```
 
 
+### Right Join
+The RIGHT JOIN keyword returns all records from the tableName2, and the matched records from the tableName1.
+The result is NULL from the left side, if there is no match.
 
+```
+SELECT colName(s)
+FROM tableName1
+RIGHT JOIN tableName2
+ON tableName1.colName = tableName2.colName;
+```
 
+## Full Join
+Returns all records when there is a match in either left or right table
 
-LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
-RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
-FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+```
+SELECT colName(s)
+FROM tableName1
+FULL OUTER JOIN tableName2
+ON tableName1.colName = tableName2.colName;  /// most of the time we use id here...
+WHERE condions;
+```
