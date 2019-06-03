@@ -5,6 +5,8 @@ It is very compressed SQL Reference notes... It will be very useful while workin
                                SQL REFERENCE BOOK CUM CHEAT SHEET
 --------------------------------------------------------------------------------------
 
+
+
 # <center>STRUCTURED QUERY LANGUAGE(SQL)</center>
 It is structured language designed to work with databases. It is used in individual
 and co-operate server.
@@ -23,6 +25,9 @@ and co-operate server.
 3. Phpmyadmin
 4. MYSQL (My Sql Workbench).  //popular
 5. Sequel Pro(Mac).
+-------------------------------------------------------------------------------------------
+
+
 
 ## To Create Database
 Using below the command line you can create your database.
@@ -35,6 +40,9 @@ To delete the existing database use the following command:
 DROP DATABASE databaseName;
 ```
 -------------------------------------------------------------------------------------------
+
+
+
 ## To Create the Table
 To create the table in existing database name such as databaseName just you have created using
 the CREATE DATABASE.
@@ -72,6 +80,9 @@ DELETE FROM tableName
 WHERE id =4; // here id is used to delete that record which not required anymore.
 ```
 ---------------------------------------------------------------------------------------
+
+
+
 ## <center>Alter the Table(Make Changes in Table)</center>
 
 ### Add a Column in Table
@@ -92,6 +103,9 @@ ALTER TABLE tableName
 DROP COLUMN colName;
 ```
 ------------------------------------------------------------------------------------------
+
+
+
 ## Select Query in Table.
 ### Select all Column
 To select all the column of your table use to following command:
@@ -120,6 +134,8 @@ ORDER BY colName1 DES/ASC; // Descending and Ascending order.
 SELECT DISTINCT colName FROM tableName;  // Use DISTINCT keyword.
 ```
 -----------------------------------------------------------------------------------------------
+
+
 ## SQL OPERATORS
 
 | OPERATOR       | EXAMPLE                    |
@@ -158,4 +174,21 @@ SELECT * FROM tableName
 WHERE state IN ('NEW DELHI', 'MUMBAI');  // here we got all the recored which has city mention here.
 ```
 ------------------------------------------------------------------------------------
+
+
+
 ## INDEXES
+Indexes can be created in table to find data more quickly and efficiently. You will not see the indexes but
+you will see the speed up  of searches and queries. It used where you need to search values or item frequently, don't put everywhere.
+
+### Create Index on Column
+```
+CREATE INDEX indexName
+ON tableName(colName) ;   // colName is the column which we want to index.
+```
+### Drop/Delete Index
+Use command to Delete the index on the column.
+```
+DROP INDEX indexName
+ON tableName(colName);  
+```
