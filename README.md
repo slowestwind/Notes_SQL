@@ -296,7 +296,7 @@ RIGHT JOIN tableName2
 ON tableName1.colName = tableName2.colName;
 ```
 
-## Full Join
+### Full Join
 Returns all records when there is a match in either left or right table
 
 ```
