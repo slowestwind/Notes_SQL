@@ -192,3 +192,74 @@ Use command to Delete the index on the column.
 DROP INDEX indexName
 ON tableName(colName);  
 ```
+-----------------------------------------------------------------------------------------
+
+
+
+## Relationship and Foreign Key
+
+Database designs are closely related to database relationships, the association between two columns in one or more tables. Relationships are defined on the basis of matching key columns. In SQL server, these relationships are defined using Primary Key-Foreign Key constraints. A link is created between two tables where the primary key of one table is associated with the foreign key of another table using database relationships.
+
+let's learn taking an example
+
+<strong>This is customer table</strong>
+```
+CREATE TABLE databaseName.products(
+  id INT NOT NULL IDENTITY PRIMARY KEY,
+  fName VARCHAR(255),
+  lName VARCHAR(255)
+  email VARCHAR(255),
+  address VARCHAR(255)
+  city VARCHAR(255),
+  state VARCHAR(255)
+  );
+```
+
+<strong>This is product table</strong>
+
+```
+CREATE TABLE databaseName.products(
+  id INT NOT NULL IDENTITY PRIMARY KEY,
+  name VARCHAR(255),
+  price VARCHAR(255)
+  );
+```
+
+<strong>This is orders0 table</strong>
+
+```
+CREATE TABLE databaseName.orders(
+  id INT NOT NULL IDENTITY PRIMARY KEY,
+  orderNumber INT(255),
+  productId VARCHAR(255),
+  customerId INT(255),
+  age INT;
+  orderDate DATETIME,
+  FOREIGN KEY(customerId) REFERECES customers(id),
+  FOREIGN KEY(productId) REFERECES product(id)
+  );
+```
+---------------------------------------------------------------------------------------
+
+## Joins the table
+Basically use to combine the records two or more table based on common field between them.
+Join types are:
+
+![joins](/joins.png);
+
+- Inner Join,
+- Left Join,
+- Right Join,
+- Full Join.
+
+### Inner Join
+Returns records that have matching values in both tables
+
+
+
+
+
+
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
