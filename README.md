@@ -5,7 +5,7 @@ It is very compressed SQL Reference notes... It will be very useful while workin
                                SQL REFERENCE BOOK CUM CHEAT SHEET
 --------------------------------------------------------------------------------------
 
-#              STRUCTURED QUERY LANGUAGE(SQL)
+# <center>STRUCTURED QUERY LANGUAGE(SQL)</center>
 It is structured language designed to work with databases. It is used in individual
 and co-operate server.
 
@@ -71,3 +71,4 @@ To Delete the any recored use the following command.
 DELETE FROM tableName
 WHERE id =4; // here id is used to delete that record which not required anymore.
 ```
+## <center>Alter the Table(Make Changes in Table)</center>
