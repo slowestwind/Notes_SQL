@@ -2,12 +2,12 @@
 It is very compressed SQL Reference notes... It will be very useful while working with SQL(Structured Query Language). Checkout the below SQL reference without wasting your time.
 
 --------------------------------------------------------------------------------------
-                     SQL REFERENCE BOOK CUM CHEAT SHEET
+                               SQL REFERENCE BOOK CUM CHEAT SHEET
 --------------------------------------------------------------------------------------
 
 #              STRUCTURED QUERY LANGUAGE(SQL)
 It is structured language designed to work with databases. It is used in individual
-and co-operate server in organization.
+and co-operate server.
 
 #### SQL accepted by the Databases are:
 1. MYSQL
