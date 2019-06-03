@@ -34,7 +34,7 @@ To delete the existing database use the following command:
 ```
 DROP DATABASE databaseName;
 ```
-
+-------------------------------------------------------------------------------------------
 ## To Create the Table
 To create the table in existing database name such as databaseName just you have created using
 the CREATE DATABASE.
@@ -71,6 +71,7 @@ To Delete the any recored use the following command.
 DELETE FROM tableName
 WHERE id =4; // here id is used to delete that record which not required anymore.
 ```
+---------------------------------------------------------------------------------------
 ## <center>Alter the Table(Make Changes in Table)</center>
 
 ### Add a Column in Table
@@ -90,7 +91,7 @@ MODIFY COLUMN colName INT(11) // If modify not work use alter.
 ALTER TABLE tableName
 DROP COLUMN colName;
 ```
-
+------------------------------------------------------------------------------------------
 ## Select Query in Table.
 ### Select all Column
 To select all the column of your table use to following command:
@@ -118,7 +119,7 @@ ORDER BY colName1 DES/ASC; // Descending and Ascending order.
 ```
 SELECT DISTINCT colName FROM tableName;  // Use DISTINCT keyword.
 ```
-
+-----------------------------------------------------------------------------------------------
 ## SQL OPERATORS
 
 | OPERATOR       | EXAMPLE                    |
@@ -134,3 +135,27 @@ SELECT DISTINCT colName FROM tableName;  // Use DISTINCT keyword.
 | IN             | marks IN (55, 84, 95)      |
 | IS OR IS NOT   | name IS NOT NULL           |
 | AS             | SELECT name as lastName    |
+
+### BETWEEN OPERATORS
+
+```
+SELECT * FROM tableName
+WHERE age
+BETWEEN 18 AND 70
+```
+
+### LIKE OPERATORS
+It is used to match some kind of pattern in column. Here in %on, % stand for anything but but in the end 'on' must required.
+```
+SELECT * FROM tableName
+Where name LIKE "%on";
+```
+
+### IN OPERATOR
+It is allows to multiple value in Where clause. Use the following command:
+```
+SELECT * FROM tableName
+WHERE state IN ('NEW DELHI', 'MUMBAI');  // here we got all the recored which has city mention here.
+```
+------------------------------------------------------------------------------------
+## INDEXES
