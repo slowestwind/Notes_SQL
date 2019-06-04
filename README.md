@@ -169,6 +169,26 @@ SELECT * FROM tableName
 Where name LIKE "%on";
 ```
 
+### REGEX OPERATORS
+It is pattern matching based on Regular Expression.
+Pattern	What the pattern matches
+- ^ 	Beginning of string
+- $	  End of string
+- .	  Any single character
+- [...]	  Any character listed between the square brackets
+- [^...]	 Any character not listed between the square brackets
+- p1|p2|p3	 Alternation; matches any of the patterns p1, p2, or p3
+- *	  Zero or more instances of preceding element
+- +	  One or more instances of preceding element
+- {n}	  n instances of preceding element
+- {m,n}	  m through n instances of preceding element
+
+
+```
+SELECT * FROM tableName
+Where name REGEXP '^s'; // return all data starting with char s
+```
+
 ### IN OPERATOR
 It is allows to multiple value in Where clause. Use the following command:
 ```
