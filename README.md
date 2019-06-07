@@ -1,5 +1,8 @@
 # SQL REFFERENCE BOOK
-It is very compressed SQL Reference notes... It will be very useful while working with SQL(Structured Query Language). Checkout the below SQL reference without wasting your time.
+It is very compressed SQL Reference notes... It will be very useful while working with SQL(Structured Query Language). 
+Checkout the below SQL reference without wasting your time.
+
+<strong>Love From My Keyboard :-)</strong>
 
 --------------------------------------------------------------------------------------
                                SQL REFERENCE BOOK CUM CHEAT SHEET
@@ -44,8 +47,7 @@ DROP DATABASE databaseName;
 
 
 ## TO CREATE THE TABLE
-To create the table in existing database name such as databaseName just you have created using
-the CREATE DATABASE.
+To create the table in existing database such as databaseName. Follow the below command.
 
 ```
 CREATE TABLE tableName(
@@ -226,7 +228,7 @@ let's learn taking an example
 
 <strong>This is customer table</strong>
 ```
-CREATE TABLE databaseName.products(
+CREATE TABLE databaseName.customer(
   id INT NOT NULL IDENTITY PRIMARY KEY,
   fName VARCHAR(255),
   lName VARCHAR(255)
@@ -247,7 +249,7 @@ CREATE TABLE databaseName.products(
   );
 ```
 
-<strong>This is orders0 table</strong>
+<strong>This is orders table</strong>
 
 ```
 CREATE TABLE databaseName.orders(
@@ -289,8 +291,9 @@ ON tableName1.colName = tableName2.colName;
 SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
 FROM Orders
   INNER JOIN Customers
-  ON Orders.CustomerID = Customers.CustomerID)
-  INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+  	ON Orders.CustomerID = Customers.CustomerID)
+  INNER JOIN Shippers 
+	ON Orders.ShipperID = Shippers.ShipperID
   );
 
 ```
@@ -410,4 +413,16 @@ syntax:
 ```
 SELECT LCASE(colName)
 FROM tableName;
+```
+
+### CASE FUNCTIONS
+It is same as If then else funtion.
+syntax:
+```
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
 ```
