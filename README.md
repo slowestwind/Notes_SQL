@@ -1,5 +1,5 @@
 # SQL REFFERENCE BOOK
-It is very compressed SQL Reference notes... It will be very useful while working with SQL(Structured Query Language). 
+It is very compressed SQL Reference notes... It will be very useful while working with SQL(Structured Query Language).
 Checkout the below SQL reference without wasting your time.
 
 <strong>Love From My Keyboard :-)</strong>
@@ -292,7 +292,7 @@ SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
 FROM Orders
   INNER JOIN Customers
   	ON Orders.CustomerID = Customers.CustomerID)
-  INNER JOIN Shippers 
+  INNER JOIN Shippers
 	ON Orders.ShipperID = Shippers.ShipperID
   );
 
@@ -359,9 +359,9 @@ syntax:
 SELECT t1.id, t1.colName1, t2.colName1, t2.colName2
 FROM tableName1 AS t1,  tableName2 AS t2;  //Here AS is used to change the table name
 ```
-
-## SQL AGGREGATE FUNCTIONS
-
+-------------------------------------------------------
+ SQL AGGREGATE FUNCTIONS
+-------------------------------------------------------
 ### AVERAGE FUNCTION
 syntax:
 ```
@@ -425,4 +425,95 @@ CASE
     WHEN conditionN THEN resultN
     ELSE result
 END;
+```
+### CEIL FUNCTION
+CEIL() function returns the smallest integer value that is bigger than or equal to a number.
+```
+SELECT CEIL(99.67); // it will return 100.
+```
+### RIGHT FUNCTION
+RIGHT() function extracts a number of characters from a string (starting from right).
+```
+RIGHT(string, number_of_chars)
+
+EXAMPLE:
+SELECT RIGHT(CustomerName, 5) AS ExtractString
+FROM Customers;
+```
+### ROUND() FUNCTION
+Returs round figure of given number.
+example:
+```
+SELECT round(number, Precision_digit)
+SELECT round(7845.265474984, 2) // it will return 7845.26
+```
+
+### TRUNCATE() FUNCTION
+TRUNCATE() function truncates a number to the specified number of decimal places.
+example:
+```
+SELECT TRUNCATE(1354.3075, 2); // ans. 1354.30
+```
+### REVERSE() FUNCTION
+REVERSE() function reverses a string and returns the result.
+example:
+```
+REVERSE(string)
+```
+
+### TRIM() FUNCTION
+Remove leading and trailing spaces from a string
+example:
+```
+SELECT TRIM('    slowestwind    ') // returns only slowestwind without spaces.
+```
+
+### LIMIT
+MySQL supports the LIMIT clause to select a limited number of records
+example:
+```
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+```
+
+
+--------------------------------------------------------------------
+### DATE FUNCTIONS
+---------------------------------------------------------------------
+### ADDDATE() FUNCTION
+DDDATE() function adds a time/date interval to a date and then returns the date.
+example :
+```
+SELECT ADDDATE("2019-06-10", INTERVAL 10 DAY);
+```
+
+### CURDATE() FUNCTION
+returns the current date.
+example:
+```
+SELECT CURDATE();
+```
+### CURRENT_TIMESTAMP() FUNCTION
+Returns current time and date.
+example :
+```
+SELECT CURRENT_TIMESTAMP();
+```
+
+### DATEDIFF() FUNCTION
+Returns the difference between two dates.
+example:
+```
+DATEDIFF(date1, date2)
+```
+### EXTRACT() FUNCTION
+It will returns part of day or time.
+example:
+```
+SELECT EXTRACT(WEEK FROM "2017-06-15"); // extract week from day.
+
+SELECT EXTRACT(YEAR_MONTH FROM "2017-06-15 09:34:21"); //year and month from date and time.
+
 ```
