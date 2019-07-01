@@ -8,7 +8,46 @@ Checkout the below SQL reference without wasting your time.
                                SQL REFERENCE BOOK CUM CHEAT SHEET
 --------------------------------------------------------------------------------------
 
+## DATABASE :
+Database is a software which is used to store the data and make operations on it using
+SQL(structure Query Language). basically database is devided into two parts :
 
+![database_Type](/databasetype.png);
+
+### TO USE THE MYSQL
+In order to use the mysql for handling relational database you should first need to
+install two things:
+![mysql_install](/mysql_install.png);
+
+### SCHEMA
+Relational database systems store data in different databases or schemas, which separate
+the data from different applications. These schemas are just collections of tables. In
+every Server's They have their own schema basically what it is... it is matadata of the server.
+You should do not make change in server schema but you can create your own schema. So these are
+some useful commands:
+
+#### CREATE SCHEMA
+syntax:
+```
+CREATE SCHEMA bookstore(schama_name);
+```
+
+#### USE SCHEMA
+Syntax:
+```
+USE bookstore(schema_name);
+```
+#### SHOW SCHEMA
+If you do not remember what the name of your schema is or want to check which
+other schemas are in your server, you can run the SHOW SCHEMAS;
+```
+SHOW SCHEMAS
+```
+
+#### USEFUL IMAGES
+![numType](/numType.png)
+
+![datefun](/dateFun.png)
 
 # <center>STRUCTURED QUERY LANGUAGE(SQL)</center>
 It is structured language designed to work with databases. It is used in individual
@@ -268,6 +307,8 @@ CREATE TABLE databaseName.orders(
 ## JOIN THE TABLES
 Basically use to combine the records two or more table based on common field between them.
 Join types are:
+
+
 
 ![joins](/joins.png);
 
